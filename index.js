@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(e){
     const eventsURL = "http://localhost:3000/events"
 
-   
-
-
     function renderEvents() {
         fetch(eventsURL)
     .then(response => response.json())

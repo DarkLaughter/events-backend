@@ -1,5 +1,19 @@
+let addEvent = false;
+
 document.addEventListener('DOMContentLoaded', function(e){
     const eventsURL = "http://localhost:3000/events"
+
+    const addBtn = document.querySelector("#new-event-btn");
+    const eventFormContainer = document.querySelector(".form");
+    addBtn.addEventListener("click", () => {
+    // hide & seek with the form
+        addEvent = !addEvent;
+            if (addEvent) {
+                eventFormContainer.style.display = "block";
+            } else {
+                eventFormContainer.style.display = "none";
+        }
+    });
 
     function renderEvents() {
         fetch(eventsURL)

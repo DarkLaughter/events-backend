@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+UserEvent.destroy_all
 User.destroy_all
 Event.destroy_all
-UserEvent.destroy_all
 
 puts "creating users"
 User.create(name: "Brandon", contact: "brandon@", username:"brandonk", password:"pass123")
@@ -21,10 +21,10 @@ end
 puts "creating events"
 
 10.times do
-    Event.create(title: Faker::WorldCup.stadium, date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentences )
-    Event.create(title: Faker::Esport.event, date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentences )
-    Event.create(title: Faker::University.name , date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentences )
-    Event.create(title: Faker::Restaurant.name, date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentences )
+    Event.create(title: Faker::WorldCup.stadium, date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentence )
+    Event.create(title: Faker::Esport.event, date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentence )
+    Event.create(title: Faker::University.name , date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentence )
+    Event.create(title: Faker::Restaurant.name, date: Faker::Date.forward(days: 14) , content: Faker::Hipster.sentence )
 end
 
 puts "creating user_events"

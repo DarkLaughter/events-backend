@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function(e){
 
     function renderEvents() {
         fetch(eventsURL)
-    .then(response => response.json())
-    .then(data =>{
-        eventsList(data)
+        .then(response => response.json())
+        .then(data =>{
+            eventsList(data)
     })
     }
 
@@ -42,8 +42,19 @@ document.addEventListener('DOMContentLoaded', function(e){
                 eventP.append(eventUl)
 
                 eventsH1.append(eventP)
-
         });
+
+        const addUserToEventForm = document.createElement('form')
+
+            addUserToEventForm.innerHTML = `
+                <label>Username: </label>
+                <input type="text name="Username">
+                    <br>
+                <label>Name: </label>
+                <input type="text name="Name">
+                    <br>
+                <input type="submit" value="Add User">
+                `
     })
 }
 

@@ -73,12 +73,13 @@
     </div>
 </div>
 <p style="text-align:left">
-    Create Your Own Event! <button id="new-event-btn">Add a new event!</button>
+    Create An Event</br>
+    <button id="new-event-btn">Add Event</button>
   </p>
 
   <div class="form">
     <form class="add-event-form">
-      <h3>Create an Event!</h3>
+      <h3>Event Details</h3>
 
       <input
         type="text"
@@ -88,13 +89,12 @@
         class="input-text"
       />
       <br />
-      <input
-        type="text"
-        name="Date"
+    <input 
+        type="date" 
+        id="start" 
+        name="date"
         value=""
-        placeholder="Select a Date"
-        class="input-text"
-      />
+        min="2020-01-01" max="2020-12-31"/>
       <br />
       <input style="height:100px;width:200px;font-size:12pt;"
         type="text-area"

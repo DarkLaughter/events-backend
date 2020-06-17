@@ -3,20 +3,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     let addEvent = false;
     const eventsURL = "http://localhost:3000/events"
 
-<<<<<<< HEAD:index.js
-    const addBtn = document.querySelector("#new-event-btn");
-    const eventFormContainer = document.querySelector(".form");
-    
-    addBtn.addEventListener("click", () => {
-    // hide & seek with the form
-        addEvent = !addEvent;
-            if (addEvent) {
-                eventFormContainer.style.display = "block";
-            } else {
-                eventFormContainer.style.display = "none";
-        }
-    });
-=======
     // const addBtn = document.querySelector("#new-event-btn");
     // const eventFormContainer = document.querySelector(".form");
     // addBtn.addEventListener("click", () => {
@@ -28,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function(e){
     //             eventFormContainer.style.display = "none";
     //     }
     // });
->>>>>>> ac3a92b200aef4830e51a516677b15d2bf03e194:dist/index.js
 
     function renderEvents() {
         fetch(eventsURL)
@@ -95,7 +80,7 @@ document.addEventListener('click', e => {
 document.addEventListener('submit', e => {
     e.preventDefault();
 
-    if (e.target.className === "add-event-form") {
+    if (e.target.className === "event-submit") {
         const eventName = e.target.name.value 
         const eventDate = e.target.date.value
         const eContent = e.target.Content.value

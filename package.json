@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "name": "events-backend",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:css" : "tailwind build src/style.css -o dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkLaughter/events-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkLaughter/events-backend/issues"
+  },
+  "homepage": "https://github.com/DarkLaughter/events-backend#readme"
+}

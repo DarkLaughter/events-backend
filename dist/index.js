@@ -171,3 +171,5 @@ document.addEventListener('submit', e => {
 
         renderEvents()
 })
+
+

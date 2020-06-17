@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     function eventsList(events) {
         const eventsH1 = document.querySelector("body > h5")
         events.forEach(obj => {
-            const eventP = document.createElement('h5')
+            const eventP = document.createElement('h6')
             const eventContent = document.createElement('p')
             const eventUl = document.createElement('ul')
             eventUl.dataset.id = obj.id
@@ -87,9 +87,9 @@ document.addEventListener('submit', e => {
         const eventName = e.target.name.value 
         const eventDate = e.target.date.value
         const eContent = e.target.Content.value
-        const eventsH5 = document.querySelector("body > h5")
+        const eventsH5 = document.querySelector("body > h6")
         
-        const eventP = document.createElement('h')
+        const eventP = document.createElement('h5')
         const eventContent = document.createElement('p')
         const eventUl = document.createElement('ul')
 

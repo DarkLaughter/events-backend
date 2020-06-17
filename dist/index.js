@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             eventUl.dataset.id = obj.id
             eventP.innerText = `${obj.title}  ${obj.date}`
             eventContent.innerText = obj.content
-            eventP.append(eventContent)
+            eventP.appendChild(eventContent)
             
             if (obj.current_users !== null) {
                 
@@ -73,19 +73,23 @@ document.addEventListener('click', e => {
         const deleteLi = e.target.parentNode
         const ul = deleteLi.parentNode
         ul.removeChild(deleteLi)
+        
     }
+
+
 })
 
 
 document.addEventListener('submit', e => {
     e.preventDefault();
-
-    if (e.target.className === "event-submit") {
+    if (e.target.className === "fixed bottom-0 right-0") {
+        
         const eventName = e.target.name.value 
         const eventDate = e.target.date.value
         const eContent = e.target.Content.value
-        const eventsH1 = document.querySelector("body > h3")
-        const eventP = document.createElement('h3')
+        const eventsH5 = document.querySelector("body > h5")
+        
+        const eventP = document.createElement('h')
         const eventContent = document.createElement('p')
         const eventUl = document.createElement('ul')
 
@@ -93,7 +97,7 @@ document.addEventListener('submit', e => {
             eventContent.innerText = eContent
             eventP.append(eventContent)
             eventP.append(eventUl)
-            eventsH1.prepend(eventP)
+            eventsH5.prepend(eventP)
 
             const addUserToEventForm = document.createElement('form')
             addUserToEventForm.className = "user-submit"

@@ -11,11 +11,11 @@ User.destroy_all
 Event.destroy_all
 
 puts "creating users"
-User.create(name: "Brandon", contact: "brandon@", username:"brandonk", password:"pass123")
-User.create(name: "Ramon", contact: "ramon@", username:"ramone", password:"pass123")
+User.create(name: "Brandon", contact: "brandon@")#, username:"brandonk", password:"pass123")
+User.create(name: "Ramon", contact: "ramon@")#, username:"ramone", password:"pass123")
     
 5.times do 
-    User.create(name: Faker::Name.name, contact: Faker::Internet.safe_email, username: Faker::Internet.username, password:"pass123", img_url: Faker::Avatar.image, bio:Faker::Quote.famous_last_words)
+    User.create(name: Faker::Name.name, contact: Faker::Internet.safe_email)#, username: Faker::Internet.username, password:"pass123", img_url: Faker::Avatar.image, bio:Faker::Quote.famous_last_words)
 end 
 
 puts "creating events"

@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function(e){
             addUserToEventForm.className = "user-submit"
             addUserToEventForm.innerHTML = `
                 <label style="color:blue">Attend This Event</label></br> 
+                <label style="color:blue">Username: </label>
+                <input style="text name="Username">
                 <label style="color:blue">Name: </label>
                 <input type="text" name="name" value="" class="input-text">
                 <label style="color:blue">Contact: </label>

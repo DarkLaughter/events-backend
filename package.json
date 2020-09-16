@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "tailwindcss": "^1.8.8"
+    "tailwindcss": "^1.8.10"
   },
   "name": "events-backend",
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
